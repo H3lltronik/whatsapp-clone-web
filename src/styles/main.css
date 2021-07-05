@@ -1,0 +1,6 @@
+@import './vars.css';
+@import './fonts/fonts.css';
+
+body, html {
+    font-family: 'Helvetica Neue', 'LiberationSans-Regular', Helvetica, sans-serif;
+}
