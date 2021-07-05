@@ -1,43 +1,31 @@
 import React, { useState } from 'react'
-import logo from './logo.svg'
+import introImg from '../static/images/intro-connection.jpg'
 import './App.css'
+import { switchTheme } from './utils/lib'
+
+switchTheme ('dark')
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+    <div className="app">
+      <div className="app__side">
+        <header className="app__side__header"></header>
+        <div className="app__side__search"></div>
+        <div className="app__side__list"></div>
+      </div>
+      <div className="app__content">
+        <div className="app__content__startup">
+          <div className="app__content__startup__image" style={{backgroundImage: `url(${introImg})`}}></div>
+
+          <h1 className="app__intro_title">Keep your phone connected</h1>
+
+          <p className="app__intro_subtitle">WhatsApp connects to your phone to sync messages. To reduce data usage, connect your phone to Wi-Fi.</p>
+
+          <div className="app__content__divider"></div>
+
+          <p className="app__intro_subtitle">WhatsApp is available for Windows. <a href="">Get it here</a></p>
+        </div>
+      </div>
     </div>
   )
 }
