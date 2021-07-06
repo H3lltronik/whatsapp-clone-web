@@ -1,0 +1,130 @@
+.app__side {
+    flex: 30%;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid var(--conversation-panel-border);
+}
+.app__side__header, .app__side__search {
+    display: flex;
+    height: 49px;
+}
+.app__side__header {
+    display: flex;
+    padding: 5px 16px;
+    align-items: center;
+    background-color: var(--intro-background);
+}
+.app__side__header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.app__side__header-icons > * {
+    margin-left: 30px;
+}
+
+.app__side__search {
+    border-bottom: 1px solid var(--border-default);
+    background-color: var(--search-container-background);
+}
+.app__side__search-input, .app__side__search-input input {
+    width: 100%;
+}
+.app__side__search-input {
+    display: flex;
+    padding: 0 15px;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+}
+.app__side__search-icon {
+    position: absolute;
+    top: 50%; left: 1.8rem;
+    transform: translateY(-50%);
+}
+
+.app__side__search-input input {
+    padding-left: 4rem;
+}
+
+.app__side__list {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: var(--search-container-background);
+}
+
+.app__side__chat {
+    height: 72px;
+    display: flex;
+    padding: 0px 0 0px 15px;
+    align-items: center;
+}
+
+.app__side__chat--active {
+    background-color: var(--background-default-active);
+}
+
+.app__side__chat-img {
+    height: 100%;
+    margin-right: 15px;
+}
+
+.app__side__chat-body {
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    padding-right: 10px;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid var(--border-default);
+}
+
+.app__side__chat-top, .app__side__chat-bottom {
+    display: flex;
+}
+
+.app__side__chat-top {
+    align-items: center;
+}
+.app__side__chat-bottom {
+    margin-top: 5px;
+    margin-bottom: -8px;
+}
+
+.app__side__chat-title, .app__side__chat-latest {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.app__side__chat-title {
+    font-size: 17px;
+    max-width: 280px;
+    color: var(--primary-strong);
+}
+.app__side__chat-latest {
+    font-size: 13px;
+    color: var(--secondary);
+}
+.app__side__chat-hour {
+    font-size: 12px;
+    white-space: nowrap;
+    color: var(--secondary);
+}
+
+.app__side__chat-icon {
+}
+
+.app__side__chat-hour, .app__side__chat-icon {
+    margin-left: auto;
+}
+
+@media screen and (min-width: 901px) and (max-width: 1024px) {
+    .app__side {
+        flex: 35%;
+    }
+    .app__side__chat-title {
+        max-width: 175px;
+    }
+}

@@ -1,5 +1,7 @@
 @import './vars.css';
 @import './fonts/fonts.css';
+@import './parts/side.css';
+@import './parts/content.css';
 
 #root, body, html {
     margin: 0;
@@ -21,68 +23,45 @@
     width: 1396px;
     display: flex;
     height: calc(100% - 38px);
-    background-color: burlywood;
 }
 
+a {
+    text-decoration: none;
+}
 
-.app__side {
-    flex: 30%;
-    display: flex;
-    flex-direction: column;
-    background-color: red;
-}
-.app__side__header, .app__side__search {
-    display: flex;
-    height: 59px;
-}
-.app__side__header {
-    background-color: aliceblue;
-}
-.app__side__search {
-    background-color: aquamarine;
-}
-.app__side__list {
+/* 
+ *
+ *  SHARED
+ *
+ */
+
+.common__spacer {
     flex-grow: 1;
-    background-color: blueviolet;
+}
+.common__cursor-pointer {
+    cursor: pointer;
 }
 
-
-.app__content {
-    flex: 70%;
-    display: flex;
-    background-color: var(--intro-background);
+.common_input {
+    height: 33px;
+    border: none;
+    border-radius: 18px;
+    color: var(--compose-primary);
+    background-color: var(--search-input-background);
 }
 
-.app__content__startup {
-    width: 80%;
-    margin: auto;
-    max-width: 460px;
-    text-align: center;
+.common_input:focus {
+    outline: none;
 }
 
-.app__content__startup__image {
-    width: 356px;
-    height: 355px;
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 100%;
-    background-size: cover;
-    background-position: center center;
+::-webkit-scrollbar-thumb {
+    background-color: hsla(0,0%,100%,.16);
 }
 
-.app__content__divider {
-    height: 1px;
-    margin: 2rem 0;
-    background-color: var(--border-stronger);
+::-webkit-scrollbar-track {
+    background: hsla(0,0%,100%,.1);
 }
 
-.app__intro__title {
-    font-size: 36px;
-    font-weight: 300;
-    color: var(--primary-title);
-}
-.app__intro__subtitle {
-    font-size: 14px;
-    line-height: 20px;
-    color: var(--intro-secondary);
+::-webkit-scrollbar {
+    width: 6px;
 }
