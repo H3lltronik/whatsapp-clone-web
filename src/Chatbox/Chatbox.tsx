@@ -27,11 +27,9 @@ export const Chatbox = () => {
                 <div className="chatbox">
                     <div className="chatbox__viewport">
                         <div className="chatbox__viewport-container">
-                            {
-                                messages.map(() => {
-                                    return <Message></Message>
-                                })
-                            }
+                            { messages.map((message) => {
+                                    return <Message message={message} key={message.id}></Message>
+                              }) }
                         </div>
                     </div>
                     <Footer></Footer>

@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { FC } from 'react'
+import moment from 'moment'
+import icons from '../utils/icons'
+
 // chatbox__message-container--mine
-export const Message = () => {
+export const Message : FC<ChatboxProps> = (props) => {
+    const {mine, message} = props.message
     return (
-        <div className={`chatbox__message-container ${null}`}>
+        <div className={`chatbox__message-container 
+        ${ mine? 'chatbox__message-container--mine':''}`}>
             <div className="chatbox__message">
-                <span className="chatbox__message-text">Me gusta la poronga</span>
+                <span className="chatbox__message-text">{message}</span>
                 <div className="chatbox__message-flags">
-                <span>8:33 PM</span>
+                    <span>{ moment(props.message.date).format("hh:mm A") }</span>
+                    { mine? <img className="chatbox__message-status" src={icons.checktwo} alt="check" /> : null}
                 </div>
             </div>
 

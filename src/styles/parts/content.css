@@ -226,3 +226,9 @@
 .chatbox-right-icon {
     margin: 0 15px 0 5px;
 }
+
+.chatbox__message-status {
+    margin-left: 5px;
+    margin-bottom: -2px;
+    width: 13px; height: 13px;
+}
