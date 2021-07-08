@@ -10,6 +10,7 @@ export const MenuDropper : FC<MenuDropper> = (props) => {
 
     const handleClose = () => {
         setAnchorEl(null);
+        if (props.onClose) props.onClose()
     };
 
     return (

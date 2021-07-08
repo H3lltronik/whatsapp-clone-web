@@ -20,7 +20,7 @@ export const Message : FC<ChatboxProps> = (props) => {
                 </div>
 
                 <div className={`chatbox__message-options ${hover? 'chatbox__message-options--open':''}`} >
-                    <MenuDropper>
+                    <MenuDropper onClose={() => setHover(false)}>
                         <img src={icons.arrowdown} alt="arrow down" />
                     </MenuDropper>
                 </div>
