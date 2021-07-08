@@ -176,6 +176,7 @@
 .chatbox__message-text {
     font-size: 14px;
     padding-right: 60px;
+    word-break: break-all;
     color: var(--message-primary);
 }
 

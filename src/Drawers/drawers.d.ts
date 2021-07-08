@@ -1,0 +1,6 @@
+type ProfileProps = {
+    
+}
+type NewMessageProps = {
+    
+}

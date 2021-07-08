@@ -2,6 +2,7 @@
 @import './fonts/fonts.css';
 @import './parts/side.css';
 @import './parts/content.css';
+@import './parts/drawers.css';
 
 #root, body, html {
     margin: 0;

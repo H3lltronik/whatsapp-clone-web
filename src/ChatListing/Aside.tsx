@@ -1,4 +1,5 @@
 import React from 'react'
+import { Profile } from '../Drawers/Profile'
 import { ChatList } from './ChatList'
 import { Header } from './Header'
 
@@ -7,6 +8,9 @@ export const Aside = () => {
         <div className="app__side">
             <Header></Header>
             <ChatList></ChatList>
+
+            {/* Drawers */}
+            <Profile/>
         </div>
     )
 }

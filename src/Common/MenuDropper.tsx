@@ -1,11 +1,12 @@
 import React, { FC } from 'react'
 import {IconButton, Menu, MenuItem} from '@material-ui/core'
 
-export const MenuDropper : FC<MenuDropper> = (props) => {
+export const MenuDropper : FC<MenuDropperProps> = (props) => {
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         setAnchorEl(event.currentTarget);
+        if (props.onOpen) props.onOpen()
     };
 
     const handleClose = () => {
@@ -15,11 +16,11 @@ export const MenuDropper : FC<MenuDropper> = (props) => {
 
     return (
         <>
-            <IconButton aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick} style={{padding: 0, margin: 0,}}>
+            <IconButton aria-controls={props.id? props.id:'simple-menu'} aria-haspopup="true" onClick={handleClick} style={{padding: 0, margin: 0,}}>
                 {props.children}
             </IconButton>
             <Menu
-                id="simple-menu"
+                id={props.id? props.id:'simple-menu'}
                 anchorEl={anchorEl}
                 
                 open={Boolean(anchorEl)}

@@ -1,5 +1,7 @@
 import arrowdown from '../../static/icons/arrow-down.svg'
 import arrowleft from '../../static/icons/arrow-left.svg'
+import arrowleft1 from '../../static/icons/arrow-left-1.svg'
+import arrowleft2 from '../../static/icons/arrow-left-2.svg'
 import block from '../../static/icons/block.svg'
 import camera from '../../static/icons/camera.svg'
 import checktwo2 from '../../static/icons/check-two-2.svg'
@@ -44,6 +46,8 @@ import videocamera from '../../static/icons/videocamera.svg'
 export default {
     arrowdown,
     arrowleft,
+    arrowleft1,
+    arrowleft2,
     block,
     camera,
     checktwo2,
