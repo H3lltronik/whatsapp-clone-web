@@ -25,6 +25,17 @@ const initialState: CounterState = {
   ],
 }
 
+for (let i = 0; i < 50; i++) {
+  initialState.messages.push ({
+    id: i,
+    message:  't piko la qla',
+    status: 'DELIVERED',
+    mine: i%2==0,
+    date: new Date(),
+  })
+}
+
+
 export const testReducer = createReducer(initialState, (builder) => {
   builder
     .addCase( createAction<[]>('TEST') , (state, action) => {

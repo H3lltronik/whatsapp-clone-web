@@ -1,4 +1,6 @@
+import { IconButton } from '@material-ui/core'
 import React from 'react'
+import { MenuDropper } from '../Common/MenuDropper'
 import icons from '../utils/icons'
 
 export const Header = () => {
@@ -12,8 +14,12 @@ export const Header = () => {
             </div>
             <div className="common__spacer"></div>
             <div className="app__side__header-icons">
-                <div className="common__cursor-pointer"><img className="app__content__search-icon" src={icons.search} alt="status" /></div>
-                <div className="common__cursor-pointer"><img src={icons.menu} alt="status" /></div>
+                <IconButton>
+                    <div className="common__cursor-pointer"><img className="app__content__search-icon" src={icons.search} alt="status" /></div>
+                </IconButton>
+                <MenuDropper>
+                    <div className="common__cursor-pointer"><img src={icons.menu} alt="status" /></div>
+                </MenuDropper>
             </div>
         </header>
     )

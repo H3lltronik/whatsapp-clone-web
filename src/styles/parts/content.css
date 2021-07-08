@@ -164,6 +164,8 @@
 .chatbox__message {
     min-width: 95px;
     max-width: 520px;
+    overflow: hidden;
+    user-select: none;
     position: relative;
     border-radius: 5px;
     padding: 6px 7px 10px 9px;
@@ -185,6 +187,22 @@
     color: var(--bubble-meta);
 }
 
+.chatbox__message-options--open {
+    right: 0 !important;
+}
+.chatbox__message-options {
+    cursor: pointer;
+    text-align: right;
+    position: absolute !important;
+    padding-right: 5px;
+    top: 0%; right: -100%;
+    width: 30%; height: 30px;
+    background: linear-gradient(
+        90deg, rgba(87,221,255,0) 0%, 
+        var(--incoming-background) 50%);
+    transition: right 0.1s ease-in-out;
+}
+
 .chatbox__message-tail {
     position: absolute;
     top: 0px; right: 100%;
@@ -203,8 +221,24 @@
     justify-content: flex-start;
 }
 
-.chatbox__message-container--mine {
+/* .chatbox__message:hover .chatbox__message-options {
+    transform: translateX(0);
+} */
+
+/* 
+ *
+ *  M I N E
+ *
+ *
+ */
+
+ .chatbox__message-container--mine {
     justify-content: flex-end;
+}
+.chatbox__message-container--mine .chatbox__message-options {
+    background: linear-gradient(
+        90deg, rgba(87,221,255,0) 0%, 
+        var(--outgoing-background) 50%);
 }
 
 .chatbox__message-container--mine .chatbox__message {
@@ -219,6 +253,13 @@
     transform: translateX(-2px);
     background-image: url('../../../static/icons/tab-sender.svg');
 }
+
+/* 
+ *
+ *  E N D - M I N E
+ *
+ *
+ */
 
 .chatbox-record {
     padding: 0 10px 0 20px;
