@@ -24,23 +24,19 @@
     margin-left: -25px !important;
 }
 
-.drawer-profile {
-    /* background-color: var(--drawer-background); */
-}
-
-.drawer-profile h2 {
+.drawer h2 {
     font-size: 14px;
     color: var(--teal);
     line-height: normal;
     font-weight: 100;
 }
 
-.drawer-profile header, .drawer-profile section {
+.drawer header, .drawer section {
     padding: 0px 20px;
     box-sizing: border-box;
 }
 
-.drawer-profile header {
+.drawer header {
     width: 100%;
     height: 108px;
     display: flex;
@@ -48,17 +44,46 @@
     background-color: var(--panel-background-colored);
 }
 
-.drawer-profile header span {
+.drawer header span {
     font-size: 19px;
     margin-left: 25px;
     color: var(--drawer-header-title);
     font-family: "LiberationSans-Bold";
 }
 
-.drawer-profile section {
+.drawer section {
     flex: 1;
+    padding: 0;
+    display: flex;
     padding-top: 35px;
+    flex-direction: column;
     background-color: var(--drawer-background);
+}
+
+.drawer-chat__search {
+    height: 49px;
+    display: flex;
+    padding: 0 20px;
+    align-items: center;
+    border-bottom: 1px solid var(--border-default);
+}
+.drawer-chat section {
+    padding-top: 0px;
+    overflow: hidden;
+}
+
+.drawer-chat .drawer-chat-input {
+    width: 100%;
+}
+
+.drawer__list {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.drawer-profile {
+    /* background-color: var(--drawer-background); */
 }
 
 .drawer-profile-image {

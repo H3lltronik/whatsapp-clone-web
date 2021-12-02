@@ -47,12 +47,27 @@ a {
     height: 33px;
     border: none;
     border-radius: 18px;
+    box-sizing: border-box;
     color: var(--compose-primary);
     background-color: var(--search-input-background);
 }
 
 .common_input:focus {
     outline: none;
+}
+
+.common_input--icon {
+    padding-left: 50px;
+}
+
+.common_input-container {
+    position: relative;
+}
+
+.common_input-icon {
+    position: absolute;
+    top: 50%; left: 1.8rem;
+    transform: translateY(-50%);
 }
 
 ::-webkit-scrollbar-thumb {

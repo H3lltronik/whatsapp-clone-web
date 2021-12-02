@@ -11,16 +11,16 @@ const initialState: CounterState = {
   value: 0,
   messages: [
     {
-      id: 1,
+      id: -1,
       message:  'Ola',
-      date: new Date(),
+      date: new Date().toISOString(),
     },
     {
-      id: 2,
+      id: -2,
       message:  't piko la qla',
       status: 'DELIVERED',
       mine: true,
-      date: new Date(),
+      date: new Date().toISOString(),
     },
   ],
 }
@@ -31,7 +31,7 @@ for (let i = 0; i < 50; i++) {
     message:  't piko la qla',
     status: 'DELIVERED',
     mine: i%2==0,
-    date: new Date(),
+    date: new Date().toISOString(),
   })
 }
 
@@ -39,7 +39,7 @@ for (let i = 0; i < 50; i++) {
 export const testReducer = createReducer(initialState, (builder) => {
   builder
     .addCase( createAction<[]>('TEST') , (state, action) => {
-      
+      console.log("test")
       state.messages.push (action.payload)
     })
 })

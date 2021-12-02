@@ -39,11 +39,6 @@
     position: relative;
     align-items: center;
 }
-.app__side__search-icon {
-    position: absolute;
-    top: 50%; left: 1.8rem;
-    transform: translateY(-50%);
-}
 
 .app__side__search-input input {
     padding-left: 4rem;
